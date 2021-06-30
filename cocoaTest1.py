@@ -28,7 +28,7 @@ cs3=digitalio.DigitalInOut(board.D13)
 sensor3=adafruit_max31865.MAX31865(spi3,cs3,wires=3)
 """
 def upload2(temp,x):
-    data1=urllib.request.urlopen("https://api.thingspeak.com/update?api_key=Z8R7TVO7N17C5R34&field1={0}&created_at={1}".format(str(float(temp)),str(x)))
+    data1=urllib.request.urlopen("https://api.thingspeak.com/update?api_key=API_KEY&field1={0}&created_at={1}".format(str(float(temp)),str(x)))
     page=data1.read()
     data1.close()
     
